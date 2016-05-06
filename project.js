@@ -15,18 +15,26 @@ function init() {
           console.log("this speed should be" + thingtoprint)
         }
 
+        var bowling = 10;
+
   $(document).on('keydown', function(e){
       // console.log(e);
 
       switch(e.which){
         case 81: 
-                  test("q");
+                  $('#ball').animate({
+                    left: "570px"
+                  }, 500)
         break;
         case 87:
-                   test("w");
+                   $('#ball').animate({
+                    left:"570px"
+                   }, 1000)
         break;
         case 69:
-                  test ("e")           
+                  $('#ball') .animate({
+                    left:"570px"
+                  }, 1500)         
          break;         
       }
   });

@@ -14,3 +14,46 @@ button {
   font-size:60px
   ;
 }
+
+.felt {
+  position: relative;
+  background: #116611;
+  padding: 1px;
+  width: 640px;
+}
+
+.out {
+  position: absolute;
+  left: 560px;
+  width: 2px;
+  height: 100%;
+  background: #fff;
+}
+
+.hit {
+  position: absolute;
+  left: 510px;
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+
+#ball {
+  position: relative;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: red;
+  margin: 15px;
+}
+
+
+/*div.ball  {     
+  width: 50px;     
+  height: 50px;    
+   background: url("../WDI_20_PROJECT_1/images/ball.jpeg") no-repeat;     background-size: 20px;     transition: 1s ease-in-out;   }       
+    The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis)     
+   div.ball:hover {         
+    transform: translate(0px,-500px);
+       }*/
