@@ -1,12 +1,16 @@
 body {
 
-  background-color: green
+  background-image:url(http://www.dreamstime.com/photos-images/mcg.html#details38858584);
+  height: 200px;
+  width: 33.33%; 
+  width: calc(100% / 3);
+  display: inline-block;
 }
 
 h1 {
 margin: 30px auto 0px auto;
 text-align: center;
-font-size: 40px;
+font-size: 60px;
 }
 
 button {
@@ -14,6 +18,13 @@ button {
   font-size:30px
   border-radius: 20px;
   ;
+}
+
+/*.container {
+    height: 650px;
+    width: 650; 
+    display: inline-block;*/
+
 }
 
 .strip {
@@ -76,16 +87,19 @@ button {
   margin: 15px;
 }
 
-#crowd-top {
-    float:top;
+
+
 }
 
+/*div:first-of-type{background-color: dark green}
+div:nth-of-type(2){background-color: blue}
+div:nth-of-type(3){background-color: red}*/
 
-/*div.ball  {     
-  width: 50px;     
-  height: 50px;    
-   background: url("../WDI_20_PROJECT_1/images/ball.jpeg") no-repeat;     background-size: 20px;     transition: 1s ease-in-out;   }       
-    The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis)     
-   div.ball:hover {         
-    transform: translate(0px,-500px);
-       }*/
+/*#crowd-top {
+    position:relative;
+    display:inline-block;
+    background-color:yellow;
+    height:100px;
+    width:33%;*/
+}
+

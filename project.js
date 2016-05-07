@@ -59,28 +59,74 @@ function init() {
  function getScore(score) {
       if (score <= 384){
       alert ("no run");
+      return(0);
         } 
       else if (score <= 449) {
-      alert ("Tricky , 2 runs!")
+      alert ("Tricky , 2 runs!");
+      return(2);
         }
       else if (score <= 469){
       alert ("Great shot, 6 runs!!");
+      return(6);
         }
       else if (score <= 509) {
       alert ("Well played , 4 runs!!");
+      return(4);
         }
       else if (score <= 559 ) {
       alert (" Run, Run , Run...you got a single, that was close");
+      return(1)
         }
       else 
-      { alert (" That was tough.....you got bowled, you are OUT!!!")}
+      { alert (" That was tough.....you got bowled, you are OUT!!!")
+        return("OUT!! Next batsman please")
+      }
         
 
  }
 
-  
+  // function getScore () {
+        
+  //       var score = parseInt($("#ball").css("left"));  
+  //       console.log(score);
+
+
+  //       getScore(score);
     
- 
+// function scoreTotal(score)  {
+//   if (score <= 384){
+//   console.log(0) ;
+//     } 
+//   else if (score <= 449) {
+//   console.log (2);
+//     }
+//   else if (score <= 469){
+//  console.log (6);
+//     }
+//   else if (score <= 509) {
+//   console.log (4);
+//     }
+//   else if (score <= 559 ) {
+//   console.log (1);
+//     }
+//   else 
+//   {console.log(7)}
+    
+// }
+
+// scoreTotal()
+
+// function reset(computer,player1) {
+
+
+// }
+
+// var umpire = {
+//   player1 = 0,
+//   computer = 0
+// }
+
+
 
 // var batsman=
 // function bowler () {
