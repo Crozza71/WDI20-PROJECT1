@@ -15,7 +15,7 @@ function init() {
   var player1Score = 0;
   var player2Score = 0;
       $("#reset").click(function(e) {
-        console.log("ive been clicked");
+        console.log("come on , reset");
       })
       $(document).on('keydown', function(e){
           // console.log(e);
@@ -25,20 +25,22 @@ function init() {
             case 81: 
                       $('#ball').animate({
                         left: "570px"
-                      }, 500 , handleMiss) // handleMiss gets run if the animation completes.  
+                      }, 350 , handleMiss) // key "q" .handleMiss gets run if the animation completes.  
 
             break;
             
             case 87:
                        $('#ball').animate({
                         left:"570px"
-                       }, 1200, handleMiss)
+                       }, 800, handleMiss)
+                       // key "w"
             break;
             
             case 69:
                       $('#ball') .animate({
                         left:"570px"
-                      }, 1800 , handleMiss)         
+                      }, 1000 , handleMiss)
+                      // key "e"         
             break;  
 
             case 32:
@@ -63,19 +65,17 @@ function init() {
       });
 
 
-     function nextBowl(){
-        $('#reset').click(function(){
-          $('#ball').animate({
-            left: "570px"
-          }, 0 )
+     function nextBowl() {
+        $('#ball') .animate({
+        right:"570px"}, 1000 , handleMiss)
           // alert("clicked again");
-        // $('#ball').animate({
-        //                 left:"570px"
+     } 
+      
 
-      });
+      };
       //  if (ballPosition >= 560 ){
 
-      //   alert (" You're OUT!!!");
+      //   alert (}" You're OUT!!!");
 
       //   else  {
       //     $('#ball') .animate({
@@ -88,7 +88,7 @@ function init() {
         // reset the ball to the start ( change the left position on the ball back to 0)
 
 
-     }
+     // 
 
      function updateScores(score) {$(score).player1Score++;
 
@@ -135,7 +135,7 @@ function init() {
 
     }
 
- }
+ 
  // get the current location of the ball ( css left position ) and decide what score the batsman gets
          // scoring - need to build these with an if statement and some comparisons
          // 0 - 384 - no runs for you

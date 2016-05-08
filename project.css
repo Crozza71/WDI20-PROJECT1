@@ -1,16 +1,17 @@
 body {
 
   background-image:url(http://phuketcricket.com/wp-content/uploads/2015/08/Sydney-Cricket-Ground.jpg);
-  height: 200px;
+  height: 300px;
   /*width: 33.33%; 
   width: calc(100% / 3);*/
   display: inline-block;
 }
 
-/*h1 {
+h1 {
 margin: 30px auto 0px auto;
 text-align: center;
-font-size: 60px;
+font-size: 100px;
+display:inline-block;
 }
 
 button {
@@ -20,10 +21,10 @@ button {
   ;
 }
 
-/*.container {
+.container {
     height: 650px;
     width: 650; 
-    display: inline-block;*/
+    display: inline-block;
 
 }
 
@@ -93,7 +94,7 @@ button {
 
 /*div:first-of-type{background-color: dark green}
 div:nth-of-type(2){background-color: blue}
-div:nth-of-type(3){background-color: red}*/
+div:nth-of-type(3){background-color: red}
 
 /*#crowd-top {
     position:relative;
