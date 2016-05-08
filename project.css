@@ -1,13 +1,13 @@
 body {
 
-  background-image:url(http://www.dreamstime.com/photos-images/mcg.html#details38858584);
+  background-image:url(http://phuketcricket.com/wp-content/uploads/2015/08/Sydney-Cricket-Ground.jpg);
   height: 200px;
-  width: 33.33%; 
-  width: calc(100% / 3);
+  /*width: 33.33%; 
+  width: calc(100% / 3);*/
   display: inline-block;
 }
 
-h1 {
+/*h1 {
 margin: 30px auto 0px auto;
 text-align: center;
 font-size: 60px;
@@ -30,7 +30,7 @@ button {
 .strip {
   position: relative;
   background: #116611;
-  padding: 1px;
+  padding: 10px;
   width: 640px;
 }
 
@@ -103,3 +103,4 @@ div:nth-of-type(3){background-color: red}*/
     width:33%;*/
 }
 
+*/
