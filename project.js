@@ -13,55 +13,56 @@ function init() {
   var innings = 4;
   var player1Score = 0;
   var player2Score = 0;
+  var canHit = true;
 
   $("#reset").click(function(e) {})
 
 
-  // Getting my elements to update the score
+  
   var $display = $('.display');
   var $playerOneScore = $('.playerOneScore');
   var $playerTwoScore = $('.playerTwoScore'); 
 
   $(document).on('keydown', function(e){
           // console.log(e);
-
+          // $('#ball').stop(true);
           switch(e.which){
 
             case 81: 
+            // key "q"
+
             $('#ball').animate({
-              left: "570px"
+              left: "560px"
                       }, 350 , handleMiss) 
 
             break;
             
             case 87:
+            // key "w"
             $('#ball').animate({
-              left:"570px"
+              left:"560px"
             }, 800, handleMiss)
             break;
             
             case 69:
+            // key "e"
             $('#ball') .animate({
-              left:"570px"
+              left:"560px"
             }, 1000 , handleMiss)         
             break;  
 
             case 32:
-                      $('#ball').stop(true);                   
+            // key "space"
+                      
+                      if (canHit) {
+                          
+                          $('#ball').stop(true);
+                          var score = getScore();
+                          updateScores(score);
+                          nextBowl();
+                          canHit = false;
 
-                      // the batsman has taken a swing. find out what his score was
-                      // keep the game logic here
-                      // probably want to stop the current animation too for the moment
-                      // https://api.jquery.com/stop/
-
-                      // get the batsman's score
-                      var score = getScore();
-
-                      // player got some runs
-                      updateScores(score);
-
-                      // next turn
-                      nextBowl();
+                      }
 
                       break;      
                     }
@@ -69,24 +70,18 @@ function init() {
 
 
   function nextBowl() {
+    
     $('#ball') .animate({
       left:"0px"
+    }, function() {
+      canHit = true;
     })
 
-    // counter++;
-    // console.log(counter);
-
-    // if (counter === 2) {
-    //   gameOver();$('#ball').stop(true);
-    // }
-
-        // reset the ball to the start ( change the left position on the ball back to 0)
-
-
-        }
+  }
 
     function updateScores(score) {
-
+      
+      console.log(score);
       if (isPlayerOnesTurnAtBat) {
           player1Score += score;
           $playerOneScore.html(player1Score);
@@ -94,15 +89,8 @@ function init() {
         player2Score += score;
         $playerTwoScore.html(player2Score);
       }
-        // player got some runs
-        // update the current players score
-        // tell the user how many runs they got
-        // update the scoreboard on the screen
-        // alert("You got " + score + "run(s)!" );
-
-        // $display.html("Batsman hit " + score)
-
-      }
+        
+    }
 
       function handleMiss() {
 
@@ -116,6 +104,7 @@ function init() {
         if ( innings == 0 ) {
 
           gameOver();
+          // $('#ball').stop(true);
 
         } else {
 
@@ -127,7 +116,7 @@ function init() {
 
        function gameOver() {
 
-        $display.html("the game is over");
+        $display.html("YOUR GAME IS OVER!!");
 
         
 
@@ -135,7 +124,7 @@ function init() {
       
       function getScore () {
 
-        // get the current location of the ball ( css left position ) and decide what score the batsman gets
+        
         var ballPosition = parseInt($("#ball").css("left"));  
 
         // scoring - need to build these with an if statement and some comparisons
@@ -147,10 +136,10 @@ function init() {
         // 559 and over - bowled out
 
         if (ballPosition <= 384) { 
-          $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO!   NO RUNS FOR THAT!")
+          $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO BEFORE THE DOG GETS THE BALL!   NO RUNS FOR THAT!")
          return 0;
         } else if (ballPosition <= 449) { 
-         $display.html("TRICKY , 2 RUNS!");
+         $display.html("TRICKY....YOU MIGHT AS WELL GET AN ICE CREAM , 2 RUNS!");
          return 2;
         } else if (ballPosition <= 469) { 
          $display.html("GREAT SHOT, 6 RUNS!!");
@@ -161,7 +150,9 @@ function init() {
         } else if (ballPosition <= 559 ) { 
          $display.html(" RUN, RUN , RUN ...THAT WAS CLOSE, YOU GOT 1 RUN!");
          return 1;
-       } 
+       } else {
+          return 0;
+       }
 
      }
 
