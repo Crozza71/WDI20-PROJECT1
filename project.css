@@ -31,8 +31,9 @@ button {
 .strip {
   position: relative;
   background: #116611;
-  padding: 10px;
+  padding: 20px;
   width: 640px;
+  margin-left: 20px;
 }
 
 .out {
