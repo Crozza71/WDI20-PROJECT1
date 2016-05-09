@@ -10,8 +10,10 @@ function init() {
 
   // first let bowler choose what speed to bowl. Listen for keypress on 3 keys
   var isPlayerOnesTurnAtBat = true;
+  var innings = 4;
   var player1Score = 0;
   var player2Score = 0;
+
   $("#reset").click(function(e) {})
 
 
@@ -28,7 +30,7 @@ function init() {
             case 81: 
             $('#ball').animate({
               left: "570px"
-                      }, 350 , handleMiss) // handleMiss gets run if the animation completes. 
+                      }, 350 , handleMiss) 
 
             break;
             
@@ -68,12 +70,20 @@ function init() {
 
   function nextBowl() {
     $('#ball') .animate({
-      left:"0px"}
+      left:"0px"
+    })
+
+    // counter++;
+    // console.log(counter);
+
+    // if (counter === 2) {
+    //   gameOver();$('#ball').stop(true);
+    // }
 
         // reset the ball to the start ( change the left position on the ball back to 0)
 
 
-        )}
+        }
 
     function updateScores(score) {
 
@@ -88,9 +98,9 @@ function init() {
         // update the current players score
         // tell the user how many runs they got
         // update the scoreboard on the screen
-        alert("You got " + score + "run(s)!" + "finally you knobhead");
+        // alert("You got " + score + "run(s)!" );
 
-        $display.html("Batsman hit " + score)
+        // $display.html("Batsman hit " + score)
 
       }
 
@@ -98,16 +108,31 @@ function init() {
 
 
         isPlayerOnesTurnAtBat = !isPlayerOnesTurnAtBat;
-        // player missed the ball
-        // tell them they missed and laugh at them
-        // time to swap players
-        // reset the ball again
-        alert('you missed dumbass');
-        nextBowl();
+        
+        $display.html("TOO SLOW!!! UNLUCKY, EARLY SHOWER?");
+
+        innings--;
+
+        if ( innings == 0 ) {
+
+          gameOver();
+
+        } else {
+
+          nextBowl();
+
+        }
 
       }
 
+       function gameOver() {
 
+        $display.html("the game is over");
+
+        
+
+      }
+      
       function getScore () {
 
         // get the current location of the ball ( css left position ) and decide what score the batsman gets
@@ -121,19 +146,20 @@ function init() {
         // 510 - 559 - 1 run
         // 559 and over - bowled out
 
-        if (ballPosition <= 384) { // this is good
+        if (ballPosition <= 384) { 
+          $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO!   NO RUNS FOR THAT!")
          return 0;
-        } else if (ballPosition <= 449) { // this is good
-         alert ("Tricky , 2 runs!");
+        } else if (ballPosition <= 449) { 
+         $display.html("TRICKY , 2 RUNS!");
          return 2;
-        } else if (ballPosition <= 469) { // this is good
-         alert ("Great shot, 6 runs!!");
+        } else if (ballPosition <= 469) { 
+         $display.html("GREAT SHOT, 6 RUNS!!");
          return 6;
-        } else if (ballPosition <= 509) { // this is good
-         alert ("Well played , 4 runs!!");
+        } else if (ballPosition <= 509) { 
+         $display.html("WELL PLAYED , 4 RUNS!!");
          return 4;
-        } else if (ballPosition <= 559 ) { // this is good
-         alert (" Run, Run , Run...you got a single, that was close");
+        } else if (ballPosition <= 559 ) { 
+         $display.html(" RUN, RUN , RUN ...THAT WAS CLOSE, YOU GOT 1 RUN!");
          return 1;
        } 
 
@@ -142,15 +168,3 @@ function init() {
    }
 
 
-// var batsman=
-// function bowler () {
-//     var random = Math.random();
-//     if (randomNumber < 0.33)  {return "spinner"; 
-//       }
-//       // add time out space bar with speed
-//       else if (randomNumber < 0.66) {return "medium pacer ";
-//       } // add time out space bar with speed
-//       else {return "fast bowler";
-//     }
-//     };
-//   bowler();

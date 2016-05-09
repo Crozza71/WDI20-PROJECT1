@@ -1,6 +1,7 @@
 body {
 
-  background-image:url(http://phuketcricket.com/wp-content/uploads/2015/08/Sydney-Cricket-Ground.jpg);
+  background-image:url(
+    http://4.bp.blogspot.com/-GuyykN31SE8/TsflxrTYwBI/AAAAAAAAAqs/zxK5EiMa1gI/s1600/DSC_0417.JPG);
   background-repeat: no-repeat; 
   display: inline-block;
   text-align: center;
@@ -74,12 +75,13 @@ button {
 } 
 
 #ball {
+  background: url(http://www.clker.com/cliparts/a/F/z/X/c/7/cricket-ball-png-hi.png);
+      background-size: cover;
   position: relative;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 48px;
   border-radius: 100%;
-  background: red;
   margin: 15px;
 }
 
