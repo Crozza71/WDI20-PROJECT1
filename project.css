@@ -1,6 +1,6 @@
 body {
 
-  background-image:url(images/Grass5_rotate.jpg);
+  background-image:url("images/asteroids.jpg");
   background-size: cover;
   display: inline-block;
   text-align: center;
@@ -28,10 +28,11 @@ h1 {
   background: 38ff38;
   padding: 15px;
   width: 640px;
-  background: green; 
+  background: black; 
+  float:right;
 }
 
-.out {
+.bang {
   position: absolute;
   left: 560px;
   width: 2px;
@@ -71,10 +72,10 @@ h1 {
   /*background: yellow;*/
 } 
 
-#wickets {
+#moon {
   position: absolute;
   right: 10px;
-  background: url(images/wickets.png);
+  background: url(images/full-moon-300.jpg);
   width: 100px;
   height: 100px;
   background-size: cover; 
@@ -101,7 +102,7 @@ h1 {
 
 
 #ball {
-  background: url(images/ball.jpg);
+  background: url(images/asteroid.png);
       background-size: cover;
   position: relative;
   left: 0;

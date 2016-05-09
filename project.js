@@ -136,19 +136,19 @@ function init() {
         // 559 and over - bowled out
 
         if (ballPosition <= 384) { 
-          $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO BEFORE THE DOG GETS THE BALL!   NO RUNS FOR THAT!")
+          $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO !   NO ROCKS FOR THAT!")
          return 0;
         } else if (ballPosition <= 449) { 
-         $display.html("TRICKY....YOU MIGHT AS WELL GET AN ICE CREAM , 2 RUNS!");
+         $display.html("TRICKY....YOU MIGHT AS WELL GET AN ICE CREAM , 2 ROCKS!");
          return 2;
         } else if (ballPosition <= 469) { 
-         $display.html("GREAT SHOT, 6 RUNS!!");
-         return 6;
+         $display.html("GREAT SHOT, 5 ROCKS!!");
+         return 5;
         } else if (ballPosition <= 509) { 
-         $display.html("WELL PLAYED , 4 RUNS!!");
+         $display.html("WELL PLAYED , 4 ROCKS!!");
          return 4;
         } else if (ballPosition <= 559 ) { 
-         $display.html(" RUN, RUN , RUN ...THAT WAS CLOSE, YOU GOT 1 RUN!");
+         $display.html(" ...THAT WAS CLOSE, YOU GOT 1 ROCK!");
          return 1;
        } else {
           return 0;
