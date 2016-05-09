@@ -13,7 +13,7 @@ h1 {
   text-align: center;
   font-size: 75px;
   display:inline-block;
-  color: gold;
+  color: red;
   background-color:black;
 }
 
@@ -25,10 +25,9 @@ h1 {
 .strip {
   margin-top: 50px;
   position: relative;
-  background: 38ff38;
+  background: 010E12;
   padding: 15px;
-  width: 640px;
-  background: black; 
+  width: 640px; 
   float:right;
 }
 
@@ -40,7 +39,7 @@ h1 {
   background: white;
 }
 
-.six {
+.five {
   position: absolute;
   left: 450px;
   width: 2px;
