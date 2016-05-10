@@ -17,6 +17,11 @@ h1 {
   background-color:black;
 }
 
+h4 {
+
+  font-size:20px;
+}
+
 
 .container {
   display: inline-block;
@@ -31,50 +36,62 @@ h1 {
   float:right;
 }
 
-.bang {
+/*.bang {
   position: absolute;
   left: 560px;
   width: 2px;
   height: 80%;
   background: white;
-}
+}*/
 
 .two {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   position: absolute;
-  left: 450px;
-  width: 2px;
+  border: 0;
+  border-left: 2px solid green;
+  left: 405px;
+  width: 30px;
   height: 100%;
-  background: red;
 }
 
 .three {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   position: absolute;
-  left: 470px;
-  width: 2px;
+  border: 0;
+  border-left: 2px solid yellow;
+  left: 485px;
+  width: 30px;
   height: 100%;
-  background: blue;
 }
 
 .four {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   position: absolute;
-  left: 509px;
-  width: 2px;
-  height: 80%;
-  background: white;
+  border: 0;
+  border-left: 2px solid blue;
+  left: 445px;
+  width: 30px;
+  height: 100%;
 }
 
 .five {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   position: absolute;
-  left: 559px;
-  width: 2px;
+  border: 0;
+  border-left: 2px solid red;
+  left: 525px;
+  width: 30px;
   height: 100%;
-  background: yellow;
 } 
 
-#moon {
+#earth {
   position: absolute;
   right: 10px;
-  background: url(images/full-moon-300.jpg);
+  background: url(images/animated-earth.gif);
   width: 100px;
   height: 100px;
   background-size: cover; 
@@ -83,8 +100,8 @@ h1 {
 
 
 #rock {
-  background: url(images/asteroid.png);
-      background-size: cover;
+  background: url(images/asteroid.gif);
+  background-size: cover;
   position: relative;
   left: 0;
   width: 50px;
@@ -112,10 +129,12 @@ h1 {
 }
 
 .instructions {
- width:500px;
+ width:400px;
  height:200px;
+ bottom:0;
+ left:10;
  background:black;
- color:gold;
+ color:red;
 
 }
 
@@ -123,8 +142,8 @@ h1 {
   width: 35%;
   height: 100%;
   float: right;
-  background: blue;
-  color:gold;
+  background: black;
+  color:red;
 }
 .scoreboard ul {
 
@@ -135,7 +154,7 @@ h1 {
 }
 
 .scoreboard ul li {
-  color: gold;
+  color: red;
   
 
 

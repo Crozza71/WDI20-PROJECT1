@@ -51,8 +51,8 @@ function init() {
             }, 800 , handleMiss)         
             break;  
 
-            case 32:
-            // key "space"
+            case 80:
+            // key "p"
                       
                       if (canHit) {
                           
@@ -101,6 +101,8 @@ function init() {
 
         innings--;
 
+        canHit = false;
+
         if ( innings == 0 ) {
 
           gameOver();
@@ -138,16 +140,16 @@ function init() {
         if (ballPosition <= 384) { 
           $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO !   NO ROCKS FOR THAT!")
          return 0;
-        } else if (ballPosition <= 449) { 
+        } else if (ballPosition <= 405) { 
          $display.html("TRICKY....YOU MIGHT AS WELL GET AN ICE CREAM , 2 ROCKS!");
          return 2;
-        } else if (ballPosition <= 469) { 
+        } else if (ballPosition <= 445) { 
          $display.html("GREAT SHOT, 3 ROCKS!!");
          return 3;
-        } else if (ballPosition <= 509) { 
+        } else if (ballPosition <= 485) { 
          $display.html("WELL PLAYED , 4 ROCKS!!");
          return 4;
-        } else if (ballPosition <= 559 ) { 
+        } else if (ballPosition <= 525 ) { 
          $display.html(" ...THAT WAS CLOSE, YOU GOT 5 ROCKS!");
          return 5;
        } else {
