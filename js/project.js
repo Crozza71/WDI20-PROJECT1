@@ -1,12 +1,19 @@
-// 450 - 590
-// if the ball's left value is between these two values
-// you've hit the ball
-// else
-// youve missed the ballx
+
 
 $(init);
 
 function init() {
+
+  $('.fancybox-new-game').hide();
+
+  $('.fancybox-welcome').fancybox().click();
+
+  $('.fancybox-welcome button').click(function(e) {
+    e.stopPropagation()
+    $.fancybox.close();
+ });
+
+
   var myAudio = new Audio('sound/bang.wav');
  
  
@@ -134,25 +141,32 @@ function init() {
 
        function gameOver() {
 
-        $display.html("YOUR GAME IS OVER!!");
+        getScore();
+       
+        if (player1Score > player2Score){
+          $display.html("YOUR GAME IS OVER!! <br>PLAYER 1 HAS WON!");    
+        } else{
+          $display.html("YOUR GAME IS OVER!! <br>PLAYER 2 HAS WON!");
+        }
 
-        
+        $('.fancybox-new-game').fancybox().click();
+
+         $('.fancybox-new-game button').click(function(e) {
+           e.stopPropagation()
+           $.fancybox.close();
+           location.reload();
+        });
 
       }
+
+
       
       function getScore () {
 
         
         var ballPosition = parseInt($("#rock").css("left"));  
 
-        // scoring - need to build these with an if statement and some comparisons
-        // 0 - 384 - no runs for you
-        // 385 - 449 - 2 runs
-        // 450 - 469 - 6 runs
-        // 470 - 509 - 4 runs
-        // 510 - 559 - 1 run
-        // 559 and over - bowled out
-
+        
         if (ballPosition <= 384) { 
           $display.html("THAT WAS RUBBISH, COME ON, HAVE A GO !   NO ROCKS FOR THAT!")
          return 0;

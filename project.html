@@ -2,15 +2,38 @@
 <html>
 <head>
   <title><Space n Crater></title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script type="text/javascript" src="project.js"></script>
-  
 
-    <link rel="stylesheet" type="text/css" href="project.css">
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="js/project.js"></script>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="css/project.css">
+
 </head>
 <body>
   <h1>Space and Crater</h1>
   <main> 
+    <div class="fancybox-welcome">
+      <p>Space n Crater. Protect your earth, use the forcefield to rebound the meteors. Dont let them through your barriers. Its your life, live it
+      <b><br>Instructions:
+      Key Q - fast
+      Key W - medium
+      Key E - slow
+      Key P- smash the meteor!!</br>
+
+      MAY THE FORCE BE WITH YOU!!
+      </p>
+      <button id="start-game">Start!</button>
+    </div>
+
+    <div class="fancybox-new-game">
+      <button id="new game">Play again?</button>
+    </div>
+
+
     <div class=container>
     
 
@@ -33,6 +56,7 @@
           </ul>
         </div>
         <div class="display">
+        <h3>Space Chat</h3>
           <div class="screen"></div>
           <div class="instructions"></div>
           
@@ -40,19 +64,10 @@
         
       </div>
 
-      <div class="instructions">
-        <p> Instructions:
-            Speed :
-            Key Q: Fast Ball
-            Key W: Medium Pacer
-            Key E: Spinner
-            Space Bar: Hit
-            </p>
-      </div> -->
 
     </div>
     
   </main>
-    
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 body {
 
-  background-image:url("images/asteroids.jpg");
+  background-image:url("../images/asteroids.jpg");
   background-size: cover;
   display: inline-block;
   text-align: center;
@@ -15,6 +15,11 @@ h1 {
   display:inline-block;
   color: red;
   background-color:black;
+}
+
+h3 {
+
+  font-size:25px;
 }
 
 h4 {
@@ -91,7 +96,7 @@ h4 {
 #earth {
   position: absolute;
   right: 10px;
-  background: url(images/earth.gif);
+  background: url(../images/earth.gif);
   width: 100px;
   height: 100px;
   background-size: cover; 
@@ -100,7 +105,7 @@ h4 {
 
 
 #rock {
-  background: url(images/asteroid.gif);
+  background: url(../images/asteroid.gif);
   background-size: cover;
   position: relative;
   left: 0;
@@ -120,22 +125,41 @@ h4 {
 
 
 .display {
+
   width: 65%;
-  height: 100%;
+  height: 120%;
   float: left;
   background: red;
-  color:gold;
+  color:black;
 
 }
 
-.instructions {
- width:400px;
- height:200px;
- bottom:0;
- left:10;
- color:red;
+
+.fancybox-welcome {
+  width: 575px;
+  height: 130px;
+  border-radius:20px;
+  background-color:red;
+  color: black;
+  overlayColor:red;
+}
+
+.fancybox-new-game {
+  border-radius:20px;
+  background-color:red;
+  color: black;
 
 }
+
+button {
+
+border-radius: 50px
+background-color:red;
+color: black;
+
+}
+
+
 
 .scorecard {
   width: 35%;
