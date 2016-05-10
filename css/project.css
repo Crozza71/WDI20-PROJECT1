@@ -6,24 +6,29 @@ body {
   text-align: center;
   margin: 0 auto;
   width: 100%;
+  font-family: 'Orbitron', sans-serif;
+
 }
 
 h1 {
   margin: 30px auto 0px auto;
   text-align: center;
-  font-size: 75px;
+  font-size: 50px;
   display:inline-block;
   color: red;
   background-color:black;
+
 }
 
 h3 {
 
   font-size:25px;
+  background-color: yellow;
+
+
 }
 
 h4 {
-
   font-size:20px;
 }
 
@@ -118,15 +123,16 @@ h4 {
 .scoreboard {
   position: absolute;
   bottom: 0;
+  left: 0;
   background: gold;
-  width: 670px;
-  height: 140px;
+  width: 100%;
+  height: 130px;
 }
 
 
 .display {
 
-  width: 65%;
+  width: 50%;
   height: 120%;
   float: left;
   background: red;
@@ -137,26 +143,22 @@ h4 {
 
 .fancybox-welcome {
   width: 575px;
-  height: 130px;
+  height: 165px;
   border-radius:20px;
-  background-color:red;
-  color: black;
-  overlayColor:red;
+  color: solid black;
+  padding:none;
 }
 
 .fancybox-new-game {
-  border-radius:20px;
-  background-color:red;
-  color: black;
+  color: solid black;
 
 }
 
 button {
 
-height:100px;
+height:40px;
 width:50px;
 border-radius: 50px
-background-color:red;
 color: black;
 
 }
@@ -164,7 +166,7 @@ color: black;
 
 
 .scorecard {
-  width: 35%;
+  width: 50%;
   height: 100%;
   float: right;
   background: black;

@@ -42,7 +42,7 @@ function init() {
  
 
   
-  var $display = $('.display');
+  var $display = $('.screen');
   var $playerOneScore = $('.playerOneScore');
   var $playerTwoScore = $('.playerTwoScore'); 
 
