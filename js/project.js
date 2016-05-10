@@ -17,9 +17,7 @@ function init() {
   var myAudio = new Audio('sound/bang.wav');
  
  
-  var backAudio = new Audio('sound/robot.wav');
-  backAudio.play();
-
+  
   
 
   function loop() {
@@ -31,7 +29,11 @@ function init() {
   };
   loop();
 
-  // first let bowler choose what speed to bowl. Listen for keypress on 3 keys
+  var backAudio = new Audio('sound/robot.wav');
+  backAudio.play();
+
+
+  
   var isPlayerOnesTurnAtBat = true;
   var innings = 4;
   var player1Score = 0;
