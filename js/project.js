@@ -153,7 +153,7 @@ function init() {
 
          $('.fancybox-new-game button').click(function(e) {
            e.stopPropagation()
-           $.fancybox.close();
+           //$.fancybox.close();
            location.reload();
         });
 
