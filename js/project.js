@@ -17,9 +17,6 @@ function init() {
   var myAudio = new Audio('sound/bang.wav');
  
  
-  
-  
-
   function loop() {
       var rand = Math.round(Math.random() * 10000) + 1000;
       setTimeout(function() {

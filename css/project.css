@@ -20,13 +20,13 @@ h1 {
 
 }
 
-h3 {
+/*h3 {
 
   font-size:25px;
   background-color: yellow;
 
 
-}
+}*/
 
 h4 {
   font-size:20px;
@@ -135,8 +135,8 @@ h4 {
   width: 50%;
   height: 120%;
   float: left;
-  background: red;
-  color:black;
+  background: black;
+  color:red;
 
 }
 
