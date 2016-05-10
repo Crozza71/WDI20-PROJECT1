@@ -91,7 +91,7 @@ h4 {
 #earth {
   position: absolute;
   right: 10px;
-  background: url(images/animated-earth.gif);
+  background: url(images/earth.gif);
   width: 100px;
   height: 100px;
   background-size: cover; 
@@ -133,7 +133,6 @@ h4 {
  height:200px;
  bottom:0;
  left:10;
- background:black;
  color:red;
 
 }

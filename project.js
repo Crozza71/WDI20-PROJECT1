@@ -8,8 +8,21 @@ $(init);
 
 function init() {
   var myAudio = new Audio('sound/bang.wav');
-  myAudio.loop=true;
-  myAudio.play ();
+ 
+ 
+  var backAudio = new Audio('sound/robot.wav');
+  backAudio.play();
+
+  
+
+  function loop() {
+      var rand = Math.round(Math.random() * 10000) + 1000;
+      setTimeout(function() {
+              myAudio.play();
+              loop();  
+      }, rand);
+  };
+  loop();
 
   // first let bowler choose what speed to bowl. Listen for keypress on 3 keys
   var isPlayerOnesTurnAtBat = true;
