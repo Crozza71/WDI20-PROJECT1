@@ -7,6 +7,9 @@
 $(init);
 
 function init() {
+  var myAudio = new Audio('sound/bang.wav');
+  myAudio.loop=true;
+  myAudio.play ();
 
   // first let bowler choose what speed to bowl. Listen for keypress on 3 keys
   var isPlayerOnesTurnAtBat = true;
