@@ -16,7 +16,7 @@ function init() {
   var canHit = true;
 
   $("#reset").click(function(e) {})
-
+ 
 
   
   var $display = $('.display');
@@ -24,14 +24,14 @@ function init() {
   var $playerTwoScore = $('.playerTwoScore'); 
 
   $(document).on('keydown', function(e){
-          // console.log(e);
-          // $('#ball').stop(true);
+          console.log(e);
+          // $('#rock').stop(true);
           switch(e.which){
 
             case 81: 
             // key "q"
 
-            $('#ball').animate({
+            $('#rock').animate({
               left: "560px"
                       }, 350 , handleMiss) 
 
@@ -39,16 +39,16 @@ function init() {
             
             case 87:
             // key "w"
-            $('#ball').animate({
+            $('#rock').animate({
               left:"560px"
-            }, 800, handleMiss)
+            }, 500, handleMiss)
             break;
             
             case 69:
             // key "e"
-            $('#ball') .animate({
+            $('#rock') .animate({
               left:"560px"
-            }, 1000 , handleMiss)         
+            }, 800 , handleMiss)         
             break;  
 
             case 32:
@@ -56,7 +56,7 @@ function init() {
                       
                       if (canHit) {
                           
-                          $('#ball').stop(true);
+                          $('#rock').stop(true);
                           var score = getScore();
                           updateScores(score);
                           nextBowl();
@@ -71,7 +71,7 @@ function init() {
 
   function nextBowl() {
     
-    $('#ball') .animate({
+    $('#rock') .animate({
       left:"0px"
     }, function() {
       canHit = true;
@@ -104,7 +104,7 @@ function init() {
         if ( innings == 0 ) {
 
           gameOver();
-          // $('#ball').stop(true);
+          // $('#rock').stop(true);
 
         } else {
 
@@ -125,7 +125,7 @@ function init() {
       function getScore () {
 
         
-        var ballPosition = parseInt($("#ball").css("left"));  
+        var ballPosition = parseInt($("#rock").css("left"));  
 
         // scoring - need to build these with an if statement and some comparisons
         // 0 - 384 - no runs for you
@@ -142,14 +142,14 @@ function init() {
          $display.html("TRICKY....YOU MIGHT AS WELL GET AN ICE CREAM , 2 ROCKS!");
          return 2;
         } else if (ballPosition <= 469) { 
-         $display.html("GREAT SHOT, 5 ROCKS!!");
-         return 5;
+         $display.html("GREAT SHOT, 3 ROCKS!!");
+         return 3;
         } else if (ballPosition <= 509) { 
          $display.html("WELL PLAYED , 4 ROCKS!!");
          return 4;
         } else if (ballPosition <= 559 ) { 
-         $display.html(" ...THAT WAS CLOSE, YOU GOT 1 ROCK!");
-         return 1;
+         $display.html(" ...THAT WAS CLOSE, YOU GOT 5 ROCKS!");
+         return 5;
        } else {
           return 0;
        }

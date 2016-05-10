@@ -39,36 +39,36 @@ h1 {
   background: white;
 }
 
-.five {
+.two {
   position: absolute;
   left: 450px;
   width: 2px;
   height: 100%;
-  /*background: red;*/
+  background: red;
 }
 
-.four {
+.three {
   position: absolute;
   left: 470px;
   width: 2px;
   height: 100%;
-  /*background: blue;*/
+  background: blue;
 }
 
-.two {
+.four {
   position: absolute;
-  left: 400px;
+  left: 509px;
   width: 2px;
   height: 80%;
   background: white;
 }
 
-.one {
+.five {
   position: absolute;
-  left: 510px;
+  left: 559px;
   width: 2px;
   height: 100%;
-  /*background: yellow;*/
+  background: yellow;
 } 
 
 #moon {
@@ -80,27 +80,9 @@ h1 {
   background-size: cover; 
 }
 
-/*#batsman {
-  position: absolute;
-  right: 30px;
-  background: url(images/batsman.jpeg);
-  width: 70px;
-  height: 70px;
-  background-size:co; 
-}*/
-
-/*#bowler {
-  position: absolute;
-  right: 30px;
-  background: url(images/bowler.jpg);
-  width: 70px;
-  height: 70px;
-  background-size: cover; */
-/*}*/
 
 
-
-#ball {
+#rock {
   background: url(images/asteroid.png);
       background-size: cover;
   position: relative;
@@ -114,7 +96,7 @@ h1 {
 .scoreboard {
   position: absolute;
   bottom: 0;
-  background: black;
+  background: gold;
   width: 670px;
   height: 140px;
 }
