@@ -56,7 +56,7 @@ function init() {
 
             $('#rock').animate({
               left: "560px"
-                      }, 350 , handleMiss) 
+                      }, 200 , handleMiss) 
 
             break;
             
@@ -64,14 +64,14 @@ function init() {
             // key "w"
             $('#rock').animate({
               left:"560px"
-            }, 500, handleMiss)
+            }, 350, handleMiss)
             break;
             
             case 69:
             // key "e"
             $('#rock') .animate({
               left:"560px"
-            }, 800 , handleMiss)         
+            }, 500 , handleMiss)         
             break;  
 
             case 80:
