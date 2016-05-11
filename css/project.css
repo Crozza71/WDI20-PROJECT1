@@ -187,6 +187,16 @@ color: black;
 
 }
 
+/*@media (min-width: 320px) and (max-width: 640px) {
+
+    
+    body {
+        padding-left: 0px; 
+        padding-right: 0px; 
+        padding-top: 0px;
+    }
+    
+*/
 /*div:first-of-type{background-color: dark green}
 div:nth-of-type(2){background-color: blue}
 div:nth-of-type(3){background-color: red}
